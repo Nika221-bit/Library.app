@@ -1,0 +1,2 @@
+﻿1|admin_giorgi|admin@library.ge|secureAdmin123
+2|Nikolozi|Nika@gmail.com|password
