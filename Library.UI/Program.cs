@@ -1,4 +1,5 @@
-﻿using Library.Infrastructure.Repositories;
+﻿using Library.Aplication.Services;
+using Library.Infrastructure.Repositories;
 
 namespace Library.UI
 {
@@ -7,7 +8,7 @@ namespace Library.UI
         static void Main(string[] args)
         {
             UserRepository repository = new UserRepository();
-            repository.AddUser();
+            UserService userService = new UserService();
         }
     }
 }

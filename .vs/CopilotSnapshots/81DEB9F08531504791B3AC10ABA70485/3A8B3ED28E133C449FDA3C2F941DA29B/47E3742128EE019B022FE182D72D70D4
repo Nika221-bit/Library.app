@@ -1,0 +1,39 @@
+﻿using Library.Domain.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Library.Infrastructure.Repositories
+{
+    public class UserRepository
+    {
+        private readonly string path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\Data.txt";
+
+
+        public void AddUser()
+        {
+            if (!File.Exists(path)) throw new FileNotFoundException("Data file not found at " + path); var allUsers = File.ReadAllLines(path).ToList();
+            int newId = 1;
+
+            int newid = allUsers.Where(x => !string
+                                            .IsNullOrWhiteSpace(x))
+                                            .Max(x => int.Parse(x.Split('|')[0])) + 1;
+
+            User user = new User();
+            user.Id = newid;
+            Console.WriteLine("-----Enter user details-----");
+            Console.WriteLine("Name: ");
+            user.Name = Console.ReadLine();
+            Console.WriteLine("Email: ");
+            user.Email = Console.ReadLine();
+            Console.WriteLine("Password: ");
+            user.Password = Console.ReadLine();
+            File.AppendAllLines(path, [user.ToString()]); // Append user data
+            Console.WriteLine("User added successfully.");
+
+
+        }
+
+
+    }
+}

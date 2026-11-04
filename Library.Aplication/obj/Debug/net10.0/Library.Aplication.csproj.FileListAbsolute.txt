@@ -13,3 +13,4 @@ C:\Users\User\OneDrive\Desktop\Library.app\Library.Aplication\obj\Debug\net10.0\
 C:\Users\User\OneDrive\Desktop\Library.app\Library.Aplication\obj\Debug\net10.0\refint\Library.Aplication.dll
 C:\Users\User\OneDrive\Desktop\Library.app\Library.Aplication\obj\Debug\net10.0\Library.Aplication.pdb
 C:\Users\User\OneDrive\Desktop\Library.app\Library.Aplication\obj\Debug\net10.0\ref\Library.Aplication.dll
+C:\Users\User\OneDrive\Desktop\Library.app\Library.Aplication\obj\Debug\net10.0\Library.Aplication.sourcelink.json

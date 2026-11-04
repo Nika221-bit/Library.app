@@ -20,3 +20,4 @@ C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\refint\L
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\Library.UI.pdb
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\Library.UI.genruntimeconfig.cache
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\ref\Library.UI.dll
+C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\Library.UI.sourcelink.json

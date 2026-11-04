@@ -1,2 +1,4 @@
 ﻿1|admin_giorgi|admin@library.ge|secureAdmin123
 2|Nikolozi|Nika@gmail.com|password
+3|Nikoloz|google@Gmail.com|123
+4|G|123|123

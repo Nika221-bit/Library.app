@@ -7,11 +7,12 @@ namespace Library.Infrastructure.Repositories
 {
     public class UserRepository
     {
-        private readonly string path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\Data.txt";
+        private readonly string path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\UserData.txt";
 
 
         public void AddUser()
         {
+            if (!File.Exists(path)) throw new FileNotFoundException("Data file not found at " + path);
             var allUsers = File.ReadAllLines(path).ToList();
             int newId = 1;
 
@@ -28,7 +29,7 @@ namespace Library.Infrastructure.Repositories
             user.Email = Console.ReadLine();
             Console.WriteLine("Password: ");
             user.Password = Console.ReadLine();
-            File.AppendAllLines(path, [user.ToString()]);
+            File.AppendAllLines(path, [user.ToString()]); // Append user data
             Console.WriteLine("User added successfully.");
 
 
