@@ -21,3 +21,4 @@ C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\Library.
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\Library.UI.genruntimeconfig.cache
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\ref\Library.UI.dll
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\obj\Debug\net10.0\Library.UI.sourcelink.json
+C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\bin\Debug\net10.0\Data\UserData.txt

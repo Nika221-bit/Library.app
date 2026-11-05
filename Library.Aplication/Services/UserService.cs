@@ -6,6 +6,7 @@ namespace Library.Aplication.Services
 {
     public class UserService
     {
+
         private readonly string _usersFilePath = "users.txt";
 
         public void UserAdd(string username, string password, string role)
@@ -22,10 +23,10 @@ namespace Library.Aplication.Services
 
             bool userExists = CheckIfUserExistsInFile(username);
 
-            //if (userExists)
-            //{
-            //    throw new UsealreadyEx($"User with username '{username}' already exists.");
-            //}
+            if (userExists)
+            {
+                throw new ($"User with username '{username}' already exists.");
+            }
 
             SaveUserToFile(username, password, role);
         }

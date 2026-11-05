@@ -13,4 +13,10 @@
     <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="..\Library.Infrastructure\Data\UserData.txt"
+          Link="Data\UserData.txt"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>

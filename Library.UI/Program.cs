@@ -1,4 +1,5 @@
-﻿using Library.Aplication.Services;
+﻿using Library.Domain.Exceptions;
+using Library.Aplication.Services;
 using Library.Infrastructure.Repositories;
 
 namespace Library.UI
@@ -8,7 +9,15 @@ namespace Library.UI
         static void Main(string[] args)
         {
             UserRepository repository = new UserRepository();
-            UserService userService = new UserService();
+
+            try
+            {
+                repository.AddUser();
+            }
+            catch (UserAlreadyExistsException exception)
+            {
+                Console.WriteLine($"Error: {exception.Message}");
+            }
         }
     }
 }

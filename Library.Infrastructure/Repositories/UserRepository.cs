@@ -1,4 +1,5 @@
 ﻿using Library.Domain.Models;
+using Library.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,29 +8,51 @@ namespace Library.Infrastructure.Repositories
 {
     public class UserRepository
     {
-        private readonly string path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\UserData.txt";
+        private readonly string path = Path.Combine(
+            AppContext.BaseDirectory,
+            "Data",
+            "UserData.txt");
 
 
         public void AddUser()
         {
-            if (!File.Exists(path)) throw new FileNotFoundException("Data file not found at " + path);
-            var allUsers = File.ReadAllLines(path).ToList();
-            int newId = 1;
+            if (!File.Exists(path))
+            {
+                throw new FileNotFoundException("User data file was not found.", path);
+            }
 
-            int newid = allUsers.Where(x => !string
-                                            .IsNullOrWhiteSpace(x))
-                                            .Max(x => int.Parse(x.Split('|')[0])) + 1;
+            var allUsers = File.ReadAllLines(path)
+                               .Where(x => !string.IsNullOrWhiteSpace(x))
+                               .ToList();
+
+            int newId = allUsers.Count == 0
+                ? 1
+                : allUsers.Max(x => int.Parse(x.Split('|')[0])) + 1;
 
             User user = new User();
-            user.Id = newid;
+            user.Id = newId;
             Console.WriteLine("-----Enter user details-----");
             Console.WriteLine("Name: ");
             user.Name = Console.ReadLine();
             Console.WriteLine("Email: ");
             user.Email = Console.ReadLine();
+
+            bool emailAlreadyExists = allUsers.Any(line =>
+            {
+                string[] fields = line.Split('|');
+                return fields.Length > 2 &&
+                       string.Equals(fields[2], user.Email, StringComparison.OrdinalIgnoreCase);
+            });
+
+            if (emailAlreadyExists)
+            {
+                throw new UserAlreadyExistsException(
+                    $"A user with email '{user.Email}' already exists.");
+            }
+
             Console.WriteLine("Password: ");
             user.Password = Console.ReadLine();
-            File.AppendAllLines(path, [user.ToString()]); // Append user data
+            File.AppendAllLines(path, [user.ToString()]);
             Console.WriteLine("User added successfully.");
 
 
