@@ -71,15 +71,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Library.UI",
+              "Title": "Library.UI.csproj",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Library.UI.csproj",
               "RelativeDocumentMoniker": "Library.UI\\Library.UI.csproj",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Library.UI.csproj",
               "RelativeToolTip": "Library.UI\\Library.UI.csproj",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-05T08:15:07.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T08:15:07.963Z"
             },
             {
               "$type": "Document",
@@ -91,8 +90,7 @@
               "RelativeToolTip": "Library.Domain\\Exceptions\\UserAlreadyExistsException.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAABQwAgAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-04T14:31:56.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T14:31:56.571Z"
             },
             {
               "$type": "Document",
@@ -116,8 +114,7 @@
               "RelativeToolTip": "Library.Domain\\Library.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-04T14:25:43.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-04T14:25:43.671Z"
             },
             {
               "$type": "Document",
@@ -129,8 +126,7 @@
               "RelativeToolTip": "Library.Aplication\\Services\\UserService.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAcwDQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-01T12:20:41.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-01T12:20:41.163Z"
             },
             {
               "$type": "Document",
@@ -155,8 +151,7 @@
               "RelativeToolTip": "Library.Infrastructure\\Library.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-01T12:17:08.116Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-01T12:17:08.116Z"
             },
             {
               "$type": "Document",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "Library.Infrastructure\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowA0AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-01T12:17:46.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-01T12:17:46.644Z"
             },
             {
               "$type": "Document",
@@ -229,8 +223,7 @@
               "RelativeToolTip": "Library.UI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAABBwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-01T12:10:57.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-01T12:10:57.903Z"
             }
           ]
         }
