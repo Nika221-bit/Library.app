@@ -9,11 +9,13 @@ namespace Library.Domain.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Password { private get; set; }
+        public string Password {  get; set; }
+        public string VerifiCationCode { get; set; }
+        public bool IsVerified { get; set; } = false;
 
         public override string? ToString()
         {
-            return $"{Id}|{Name}|{Email}|{Password}";
+            return $"{Id}|{Name}|{Email}|{Password}|{VerifiCationCode}|{IsVerified}";
         }
     } 
       

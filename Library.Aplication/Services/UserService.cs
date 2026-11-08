@@ -1,105 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Library.Domain.Models;
+using Library.Domain.Interfaces;
+
 
 namespace Library.Aplication.Services
 {
     public class UserService
     {
+        private readonly IUserRepository _userRepository;
 
-        private readonly string _usersFilePath = "users.txt";
-
-        public void UserAdd(string username, string password, string role)
+        public UserService(IUserRepository userRepository)
         {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-            {
-                throw new ArgumentException("Username or password cannot be empty.");
-            }
-
-            if (password.Length < 6)
-            {
-                throw new ArgumentException("Password must be at least 6 characters long.");
-            }
-
-            bool userExists = CheckIfUserExistsInFile(username);
-
-            if (userExists)
-            {
-                throw new ($"User with username '{username}' already exists.");
-            }
-
-            SaveUserToFile(username, password, role);
+            _userRepository = userRepository;
         }
 
-        private bool CheckIfUserExistsInFile(string username)
+        public void RegisterUser(string name, string email, string password)
         {
-            if (!File.Exists(_usersFilePath))
+            List<User> Users = _userRepository.GetAllUsers();
+
+
+            int maxId = 0;
+            if(Users.Count > 0)
             {
-                return false;
+                maxId = Users.Max(u => u.Id);
+                maxId++;
             }
 
-            try
-            {
-                string[] lines = File.ReadAllLines(_usersFilePath);
-                foreach (string line in lines)
-                {
-                    string[] parts = line.Split('|');
+            Random random = new();
 
-                    if (parts.Length >= 2 && parts[1].Trim().Equals(username, StringComparison.OrdinalIgnoreCase))
-                    {
-                        return true;
-                    }
-                }
-            }
-            catch (IOException ex)
+            var user = new User
             {
-                throw new Exception($"Error reading users file: {ex.Message}", ex);
-            }
-
-            return false;
+                Id = maxId,
+                Name = name,
+                Email = email,
+                Password = BCrypt.Net.BCrypt.HashPassword(password),
+                IsVerified = false
+            };
+            _userRepository.SaveUser(user);
         }
 
-        private void SaveUserToFile(string username, string password, string role)
+        public void LoginUser(string email, string password)
         {
-            int newId = GenerateNewUserId();
-            string userRecord = $"{newId} | {username} | {password} | {role} | 0.00\n";
+            var user = _userRepository.GetUserByEmail(email);
 
-            try
+            if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
-                File.AppendAllText(_usersFilePath, userRecord);
+                Console.WriteLine("Login successful!");
             }
-            catch (IOException ex)
+            else
             {
-                throw new Exception($"Error saving user to file: {ex.Message}", ex);
+                Console.WriteLine("Invalid email or password.");
             }
         }
 
-        private int GenerateNewUserId()
-        {
-            if (!File.Exists(_usersFilePath))
-            {
-                return 1001;
-            }
 
-            try
-            {
-                string[] lines = File.ReadAllLines(_usersFilePath);
-                if (lines.Length == 0) return 1001;
 
-                string lastLine = lines[lines.Length - 1];
-                string[] parts = lastLine.Split('|');
 
-                if (parts.Length > 0 && int.TryParse(parts[0].Trim(), out int lastId))
-                {
-                    return lastId + 1;
-                }
-            }
-            catch (Exception)
-            {
-                return 1001;
-            }
-
-            return 1001;
-        }
     }
 }

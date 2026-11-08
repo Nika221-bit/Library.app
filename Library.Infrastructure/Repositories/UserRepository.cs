@@ -3,61 +3,64 @@ using Library.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Security.Cryptography.X509Certificates;
+using Library.Domain.Interfaces;
+using System.IO;
 
 namespace Library.Infrastructure.Repositories
-{
-    public class UserRepository
+{    
+    public class UserRepository : IUserRepository
     {
-        private readonly string path = Path.Combine(
-            AppContext.BaseDirectory,
-            "Data",
-            "UserData.txt");
+        private readonly string _path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\UserData.txt";
 
-
-        public void AddUser()
+        public void SaveUser(User user)
         {
-            if (!File.Exists(path))
+            File.AppendAllLines(_path, new List<string> { user.ToString() });
+        }
+
+        public List<User> GetAllUsers()
+        {
+            var userlines = File.ReadAllLines(_path);
+            List<User> userList = new List<User>();
+
+            foreach (var item in userlines)
             {
-                throw new FileNotFoundException("User data file was not found.", path);
+                var parts = item.Split('|');
+                User user = new User();
+                user.Id = int.Parse(parts[0]);
+                user.Name = parts[1];
+                user.Email = parts[2];
+                user.Password = parts[3];
+                userList.Add(user);
             }
+            return userList;
+        }
+        
 
-            var allUsers = File.ReadAllLines(path)
-                               .Where(x => !string.IsNullOrWhiteSpace(x))
-                               .ToList();
+        public User GetUserByEmail(string email)
+        {
+            var userLines = File.ReadAllLines(_path).ToList();
 
-            int newId = allUsers.Count == 0
-                ? 1
-                : allUsers.Max(x => int.Parse(x.Split('|')[0])) + 1;
-
-            User user = new User();
-            user.Id = newId;
-            Console.WriteLine("-----Enter user details-----");
-            Console.WriteLine("Name: ");
-            user.Name = Console.ReadLine();
-            Console.WriteLine("Email: ");
-            user.Email = Console.ReadLine();
-
-            bool emailAlreadyExists = allUsers.Any(line =>
+            foreach (var item in userLines)
             {
-                string[] fields = line.Split('|');
-                return fields.Length > 2 &&
-                       string.Equals(fields[2], user.Email, StringComparison.OrdinalIgnoreCase);
-            });
+                var parts = item.Split("|");
+                if (parts[2] == email)
+                {
 
-            if (emailAlreadyExists)
-            {
-                throw new UserAlreadyExistsException(
-                    $"A user with email '{user.Email}' already exists.");
+                    User user = new User();
+                    user.Id = int.Parse(parts[0]);
+                    user.Name = parts[1];
+                    user.Email = parts[2];
+                    user.Password = parts[3];
+                    return user;
+
+                }
             }
+            return null;
 
-            Console.WriteLine("Password: ");
-            user.Password = Console.ReadLine();
-            File.AppendAllLines(path, [user.ToString()]);
-            Console.WriteLine("User added successfully.");
+
 
 
         }
-
-
     }
 }
