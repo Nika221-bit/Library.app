@@ -9,6 +9,10 @@ namespace Library.Domain.Interfaces
     {
         void SaveUser(User user);
         List<User> GetAllUsers();
-        User GetUserByEmail(string email);
+        User? GetUserByEmail(string email);
+        void SaveUsers(List<string> users);
+        void DeleteAllUsers();
+
+
     }
 }

@@ -17,7 +17,14 @@ namespace Library.Infrastructure.Repositories
         {
             File.AppendAllLines(_path, new List<string> { user.ToString() });
         }
-
+        public void SaveUsers(List<string> users)
+        {
+            File.AppendAllLines(_path, users);
+        }
+        public void DeleteAllUsers()
+        {
+            File.WriteAllText(_path, ""); 
+		}
         public List<User> GetAllUsers()
         {
             var userlines = File.ReadAllLines(_path);
@@ -25,19 +32,24 @@ namespace Library.Infrastructure.Repositories
 
             foreach (var item in userlines)
             {
-                var parts = item.Split('|');
+             var parts = item.Split('|');
+                if (parts.Length < 7)
+                    continue;
                 User user = new User();
                 user.Id = int.Parse(parts[0]);
                 user.Name = parts[1];
                 user.Email = parts[2];
                 user.Password = parts[3];
+                user.VerifiCationCode = parts[4];
+                user.IsVerified = bool.Parse(parts[5]);
+                user.Role = parts[6];
                 userList.Add(user);
             }
             return userList;
         }
         
 
-        public User GetUserByEmail(string email)
+        public User? GetUserByEmail(string email)
         {
             var userLines = File.ReadAllLines(_path).ToList();
 
@@ -52,6 +64,10 @@ namespace Library.Infrastructure.Repositories
                     user.Name = parts[1];
                     user.Email = parts[2];
                     user.Password = parts[3];
+                    user.VerifiCationCode = parts[4];
+                    user.IsVerified = bool.Parse(parts[5]);
+                    user.Role = parts[6];
+
                     return user;
 
                 }

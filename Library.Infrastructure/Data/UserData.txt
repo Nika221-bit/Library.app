@@ -1,3 +1,10 @@
 ﻿1|admin_giorgi|admin@library.ge|secureAdmin123
 2|Nikolozi|Nika@gmail.com|password
 3|Nikoloz|google@Gmail.com|123
+0|nikoloz|paresiw914@macsnipe.com|$2a$11$/To/ivJqdCaBXD6HVATkCu6hAwR/GyVz4c.zO8rAR2SEOADz43sY6||False|User
+1|nika|paresiw914@macsnipe.com|$2a$11$9kdKZuYK7gVPFKxd.n3akOYJVvm0ZUsdO.MkY7NLiQQXAaLETwrCG||False|User
+2|Nikoloz|paresiw914@macsnipe.com|$2a$11$Q4wcFi2UkJN/2YguC3lYMOSaFFI5kH3E7TJrdfO5E7II/k9fvX3YS||False|User
+3|nika|paresiw914@macsnipe.com|$2a$11$zfzl6QRQPrbCStlXs2Fwo.t6lq15qZbyaBXE.fSt9hLQbbpM9U.lu|111061|False|User
+4|Nikoloz|paresiw914@macsnipe.com|$2a$11$IShYY9c/Dgt0QIbetLZy3Onu9DxtWe9F2ydzHRl.aKBIZznKpx0/W|971578|False|User
+5|Nikolozi|paresiw914@macsnipe.com|$2a$11$wwj6x4cubLsPgu3MonenS.lSPdhNq0JwCQfrD5t2wIrKmlPiILIha|217880|False|User
+6|Nikolozi|paresiw914@macsnipe.com|$2a$11$X.LHa/jq0c9dkBnxdHGz8.sG6ufaiT9p5VdNGf/NNTZMe.D4/ZG5u|531364|False|User

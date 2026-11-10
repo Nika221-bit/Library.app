@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|solutionrelative:library.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|solutionrelative:library.aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.infrastructure\\library.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\library.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|solutionrelative:library.aplication\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|solutionrelative:library.aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|solutionrelative:library.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|solutionrelative:library.domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\menu\\usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\menu\\usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.infrastructure\\data\\userdata.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\data\\userdata.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.infrastructure\\library.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\library.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,47 +62,102 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Program.cs",
               "RelativeDocumentMoniker": "Library.UI\\Program.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Program.cs",
               "RelativeToolTip": "Library.UI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-01T12:10:57.903Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Library.Infrastructure",
+              "DocumentIndex": 8,
+              "Title": "UserMenu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Menu\\UserMenu.cs",
+              "RelativeDocumentMoniker": "Library.UI\\Menu\\UserMenu.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Menu\\UserMenu.cs",
+              "RelativeToolTip": "Library.UI\\Menu\\UserMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T01:42:21.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Menu\\Menu.cs",
+              "RelativeDocumentMoniker": "Library.UI\\Menu\\Menu.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Menu\\Menu.cs",
+              "RelativeToolTip": "Library.UI\\Menu\\Menu.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAwwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T01:39:48.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Library.Aplication\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\EmailService.cs",
+              "RelativeToolTip": "Library.Aplication\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wBoAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-08T12:16:02.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\appsettings.json",
+              "RelativeDocumentMoniker": "Library.UI\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\appsettings.json",
+              "RelativeToolTip": "Library.UI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-11-08T11:02:28.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Library.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Infrastructure\\Library.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Library.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Infrastructure\\Library.Infrastructure.csproj",
               "RelativeToolTip": "Library.Infrastructure\\Library.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-11-07T23:38:19.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-07T23:38:19.771Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Library.Aplication\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\UserService.cs",
               "RelativeToolTip": "Library.Aplication\\Services\\UserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAYwC8AAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T22:32:10.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "UserData.txt",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Infrastructure\\Data\\UserData.txt",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Data\\UserData.txt",
@@ -99,46 +170,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "Library.Infrastructure\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowB4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwCIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T21:45:09.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Domain\\Interfaces\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Library.Domain\\Interfaces\\IUserRepository.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Domain\\Interfaces\\IUserRepository.cs",
               "RelativeToolTip": "Library.Domain\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T21:43:16.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Domain\\Models\\User.cs",
               "RelativeDocumentMoniker": "Library.Domain\\Models\\User.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Domain\\Models\\User.cs",
               "RelativeToolTip": "Library.Domain\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-07T21:40:12.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "Library.Infrastructure\\Class1.cs",
@@ -146,12 +217,7 @@
               "RelativeToolTip": "Library.Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T21:39:37.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2026-11-07T21:39:37.426Z"
             }
           ]
         }

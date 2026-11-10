@@ -9,26 +9,28 @@ namespace Library.Aplication.Services
 {
     public class UserService
     {
-        private readonly IUserRepository _userRepository;
 
-        public UserService(IUserRepository userRepository)
+        private readonly string _path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\UserData.txt";
+        private readonly IUserRepository _userRepository;
+        private readonly IEmailService _emailService;
+
+        public UserService(IUserRepository userRepository, EmailService emailService)
         {
             _userRepository = userRepository;
+            _emailService = emailService;
         }
 
         public void RegisterUser(string name, string email, string password)
         {
             List<User> Users = _userRepository.GetAllUsers();
 
-
             int maxId = 0;
-            if(Users.Count > 0)
+            if (Users.Count > 0)
             {
                 maxId = Users.Max(u => u.Id);
                 maxId++;
             }
-
-            Random random = new();
+            string generatedCode = new Random().Next(100000, 999999).ToString();
 
             var user = new User
             {
@@ -36,9 +38,14 @@ namespace Library.Aplication.Services
                 Name = name,
                 Email = email,
                 Password = BCrypt.Net.BCrypt.HashPassword(password),
-                IsVerified = false
+                IsVerified = false,
+                VerifiCationCode = generatedCode,
+
             };
             _userRepository.SaveUser(user);
+
+
+            _emailService.SendEmail(email, "ვერიფიკაციის კოდი", $"თქვენი ვერიფიკაციის კოდია: {generatedCode}");
         }
 
         public void LoginUser(string email, string password)
@@ -55,8 +62,32 @@ namespace Library.Aplication.Services
             }
         }
 
+        public void Deleteall()
+        {
+            File.WriteAllText(_path, "");
+        }
+        public void SaveUser(User user)
+        {
+            File.AppendAllLines(_path, new List<string> { user.ToString() });
+        }
+        public void SaveUsers(List<string> users)
+        {
+            File.AppendAllLines(_path, users);
+        }
 
-
-
+        public void VerifyUser(string email, string verificationCode)
+        {
+            var user = _userRepository.GetUserByEmail(email);
+            if (user != null && user.VerifiCationCode == verificationCode)
+            {
+                user.IsVerified = true;
+                _userRepository.SaveUser(user);
+                Console.WriteLine("User verified successfully!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid email or verification code.");
+            }
+        }
     }
 }
