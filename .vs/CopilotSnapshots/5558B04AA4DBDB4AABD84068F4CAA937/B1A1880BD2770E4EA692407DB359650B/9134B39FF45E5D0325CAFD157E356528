@@ -1,0 +1,27 @@
+﻿using Library.Domain.Exceptions;
+using Library.Aplication.Services;
+using Library.Infrastructure.Repositories;
+using Library.UI.Menu;
+
+namespace Library.UI
+{
+    internal class Program
+    {
+      static void Main(string[] args)
+        {
+            UserRepository userRepository = new UserRepository();
+            EmailService emailService = new();
+            UserService userService = new UserService(userRepository, emailService);
+            Menu menu = new Menu(userService);
+
+            string choice = string.Empty;
+            while (choice != "0")
+            {
+
+                menu.ShowMenu();
+
+            }
+
+        }
+    }
+}
