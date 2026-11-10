@@ -7,3 +7,5 @@
 3|nika|paresiw914@macsnipe.com|$2a$11$zfzl6QRQPrbCStlXs2Fwo.t6lq15qZbyaBXE.fSt9hLQbbpM9U.lu|111061|False|User
 4|Nikoloz|paresiw914@macsnipe.com|$2a$11$IShYY9c/Dgt0QIbetLZy3Onu9DxtWe9F2ydzHRl.aKBIZznKpx0/W|971578|False|User
 5|Nikolozi|paresiw914@macsnipe.com|$2a$11$wwj6x4cubLsPgu3MonenS.lSPdhNq0JwCQfrD5t2wIrKmlPiILIha|217880|False|User
+6|Nikolozi|paresiw914@macsnipe.com|$2a$11$X.LHa/jq0c9dkBnxdHGz8.sG6ufaiT9p5VdNGf/NNTZMe.D4/ZG5u|531364|False|User
+7|Nikoloz|paresiw914@macsnipe.com|$2a$11$5mgo67OEM5lApx40BbBeSeNg8O.PwXPJdbO2Ptiz8wYiQzfCCFoU2|205189|False|User

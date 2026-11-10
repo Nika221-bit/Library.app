@@ -1,0 +1,9 @@
+﻿{
+  "EmailSettings": {
+    "SmtpServer": "smtp.gmail.com",
+    "Port": 587,
+    "SenderEmail": "sheni.meili@gmail.com",
+    "SenderName": "Library",
+    "AppPassword": "vxnl qnzy tlaq maah"
+  }
+}
