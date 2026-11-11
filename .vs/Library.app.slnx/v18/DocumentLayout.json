@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\services\\emailservice2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|solutionrelative:library.aplication\\services\\emailservice2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|solutionrelative:library.aplication\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|solutionrelative:library.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{726C8F1C-AF97-DB43-6048-1186CD6D3F72}|Library.Domain\\Library.Domain.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,8 +51,8 @@
       "RelativeMoniker": "D:0:0:{C715B566-9B3F-4C1F-A9CD-CE0CFD835824}|Library.Infrastructure\\Library.Infrastructure.csproj|solutionrelative:library.infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\library.aplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Aplication.csproj|solutionrelative:library.aplication\\library.aplication.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Application.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.aplication\\library.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1BE07B31-7027-8149-6FD3-23B62A7528C8}|Library.Aplication\\Library.Application.csproj|solutionrelative:library.aplication\\library.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E877CCCB-8427-9F73-850E-BECC0C32827F}|Library.UI\\Library.UI.csproj|c:\\users\\user\\onedrive\\desktop\\library.app\\library.ui\\library.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -66,11 +66,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\Program.cs",
               "RelativeDocumentMoniker": "Library.UI\\Program.cs",
@@ -80,6 +80,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-01T12:10:57.903Z",
               "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailService2.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\EmailService2.cs",
+              "RelativeDocumentMoniker": "Library.Aplication\\Services\\EmailService2.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\EmailService2.cs",
+              "RelativeToolTip": "Library.Aplication\\Services\\EmailService2.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwvxkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-11T02:46:00.289Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -101,10 +114,10 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "Library.Aplication.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Aplication.csproj",
-              "RelativeDocumentMoniker": "Library.Aplication\\Library.Aplication.csproj",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Aplication.csproj",
-              "RelativeToolTip": "Library.Aplication\\Library.Aplication.csproj",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Application.csproj",
+              "RelativeDocumentMoniker": "Library.Aplication\\Library.Application.csproj",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Application.csproj",
+              "RelativeToolTip": "Library.Aplication\\Library.Application.csproj",
               "ViewState": "AgIAAAoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-11-10T03:23:14.466Z"
@@ -135,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "Library.Aplication\\Services\\EmailService.cs",
@@ -143,19 +156,7 @@
               "RelativeToolTip": "Library.Aplication\\Services\\EmailService.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-08T12:16:02.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\appsettings.json",
-              "RelativeDocumentMoniker": "Library.UI\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.UI\\appsettings.json",
-              "RelativeToolTip": "Library.UI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-11-08T11:02:28.273Z",
+              "WhenOpened": "2026-11-08T12:16:02.791Z",
               "EditorCaption": ""
             },
             {
@@ -172,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Library.Aplication\\Services\\UserService.cs",
@@ -180,7 +181,8 @@
               "RelativeToolTip": "Library.Aplication\\Services\\UserService.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAAAFwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T22:32:10.746Z"
+              "WhenOpened": "2026-11-07T22:32:10.746Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -240,7 +242,8 @@
               "RelativeToolTip": "Library.Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-07T21:39:37.426Z"
+              "WhenOpened": "2026-11-07T21:39:37.426Z",
+              "EditorCaption": ""
             }
           ]
         }

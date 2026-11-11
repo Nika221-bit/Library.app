@@ -211,9 +211,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Aplication.csproj",
-      "projectName": "Library.Aplication",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Aplication.csproj",
+      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Application.csproj",
+      "projectName": "Library.Application",
+      "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Application.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\obj\\",
       "projectStyle": "PackageReference",

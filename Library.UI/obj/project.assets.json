@@ -167,7 +167,7 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Library.Aplication/1.0.0": {
+      "Library.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
@@ -176,10 +176,10 @@
           "Microsoft.Extensions.Configuration": "10.0.14"
         },
         "compile": {
-          "bin/placeholder/Library.Aplication.dll": {}
+          "bin/placeholder/Library.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Library.Aplication.dll": {}
+          "bin/placeholder/Library.Application.dll": {}
         }
       },
       "Library.Domain/1.0.0": {
@@ -468,10 +468,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Library.Aplication/1.0.0": {
+    "Library.Application/1.0.0": {
       "type": "project",
-      "path": "../Library.Aplication/Library.Aplication.csproj",
-      "msbuildProject": "../Library.Aplication/Library.Aplication.csproj"
+      "path": "../Library.Aplication/Library.Application.csproj",
+      "msbuildProject": "../Library.Aplication/Library.Application.csproj"
     },
     "Library.Domain/1.0.0": {
       "type": "project",
@@ -486,7 +486,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Library.Aplication >= 1.0.0",
+      "Library.Application >= 1.0.0",
       "Library.Domain >= 1.0.0",
       "Library.Infrastructure >= 1.0.0",
       "Microsoft.Extensions.Configuration.FileExtensions >= 10.0.14",
@@ -526,8 +526,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Aplication.csproj": {
-              "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Aplication.csproj"
+            "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Application.csproj": {
+              "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Aplication\\Library.Application.csproj"
             },
             "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Domain\\Library.Domain.csproj": {
               "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\Library.app\\Library.Domain\\Library.Domain.csproj"
