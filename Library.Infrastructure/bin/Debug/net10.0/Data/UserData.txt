@@ -9,3 +9,6 @@
 5|Nikolozi|paresiw914@macsnipe.com|$2a$11$wwj6x4cubLsPgu3MonenS.lSPdhNq0JwCQfrD5t2wIrKmlPiILIha|217880|False|User
 6|Nikolozi|paresiw914@macsnipe.com|$2a$11$X.LHa/jq0c9dkBnxdHGz8.sG6ufaiT9p5VdNGf/NNTZMe.D4/ZG5u|531364|False|User
 7|Nikoloz|paresiw914@macsnipe.com|$2a$11$5mgo67OEM5lApx40BbBeSeNg8O.PwXPJdbO2Ptiz8wYiQzfCCFoU2|205189|False|User
+8|Nikolozi|paresiw914@macsnipe.com|$2a$11$uHkAtXMaO/zWuKVK..6ujOfwbbSUJimbizfGj/8leFVrzdxoOMdha|408418|False|User
+9|nikoloz|kadkadk@|$2a$11$1bNzLig7d4B6LV9wRYG9Xu55.y3XwQLZ9li3V7SEmTuJVfYARBEd2|438917|False|User
+10|Nikolozi|notig25837@nbasweeps.com|$2a$11$Rh6gRaY04eIze9OsDbazUuro8hQ4Gfs9U9svnEmC0VoRhxBgpRFdu|521579|False|User

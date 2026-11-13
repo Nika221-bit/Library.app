@@ -9,15 +9,14 @@ namespace Library.UI
     {
         private static void Main()
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(System.IO.Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddEnvironmentVariables()
+                .Build();
 
-            IConfiguration config = builder.Build();
-
-           
             var userRepository = new UserRepository();
-            var emailService = new EmailService(config);
+            var emailService = new EmailService(configuration);
             var userService = new UserService(userRepository, emailService);
 
             var menu = new MenuView(userService);

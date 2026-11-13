@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Library.Domain.Models;
+﻿using Library.Domain.Models;
 using Library.Domain.Interfaces;
+using System.Security.Cryptography;
 
 
 namespace Library.Aplication.Services
@@ -10,11 +8,10 @@ namespace Library.Aplication.Services
     public class UserService
     {
 
-        private readonly string _path = @"C:\Users\User\OneDrive\Desktop\Library.app\Library.Infrastructure\Data\UserData.txt";
         private readonly IUserRepository _userRepository;
         private readonly IEmailService _emailService;
 
-        public UserService(IUserRepository userRepository, EmailService emailService)
+        public UserService(IUserRepository userRepository, IEmailService emailService)
         {
             _userRepository = userRepository;
             _emailService = emailService;
@@ -22,30 +19,25 @@ namespace Library.Aplication.Services
 
         public void RegisterUser(string name, string email, string password)
         {
-            List<User> Users = _userRepository.GetAllUsers();
+            var users = _userRepository.GetAllUsers();
 
-            int maxId = 0;
-            if (Users.Count > 0)
-            {
-                maxId = Users.Max(u => u.Id);
-                maxId++;
-            }
-            string generatedCode = new Random().Next(100000, 999999).ToString();
+            var nextId = users.Count == 0 ? 1 : users.Max(user => user.Id) + 1;
+            var verificationCode = RandomNumberGenerator.GetInt32(100000, 1000000).ToString();
 
             var user = new User
             {
-                Id = maxId,
+                Id = nextId,
                 Name = name,
                 Email = email,
                 Password = BCrypt.Net.BCrypt.HashPassword(password),
                 IsVerified = false,
-                VerifiCationCode = generatedCode,
+                VerifiCationCode = verificationCode,
 
             };
             _userRepository.SaveUser(user);
 
 
-            _emailService.SendEmail(email, "ვერიფიკაციის კოდი", $"თქვენი ვერიფიკაციის კოდია: {generatedCode}");
+            _emailService.SendEmail(email, "ვერიფიკაციის კოდი", $"თქვენი ვერიფიკაციის კოდია: {verificationCode}");
         }
 
         public void LoginUser(string email, string password)
@@ -60,19 +52,6 @@ namespace Library.Aplication.Services
             {
                 Console.WriteLine("Invalid email or password.");
             }
-        }
-
-        public void Deleteall()
-        {
-            File.WriteAllText(_path, "");
-        }
-        public void SaveUser(User user)
-        {
-            File.AppendAllLines(_path, new List<string> { user.ToString() });
-        }
-        public void SaveUsers(List<string> users)
-        {
-            File.AppendAllLines(_path, users);
         }
 
         public void VerifyUser(string email, string verificationCode)

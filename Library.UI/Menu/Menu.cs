@@ -1,10 +1,14 @@
 ﻿using Library.Aplication.Services;
-using System;
+using Spectre.Console;
 
 namespace Library.UI.Menu
 {
     public class Menu
     {
+        private const string RegisterOption = "Register";
+        private const string LoginOption = "Login";
+        private const string ExitOption = "Exit";
+
         private readonly UserService _service;
 
         public Menu(UserService service)
@@ -14,58 +18,70 @@ namespace Library.UI.Menu
 
         public void ShowMenu()
         {
-          
-                Console.WriteLine("1. Register");
-                Console.WriteLine("2. Login");
-                Console.WriteLine("3. Exit");
-                Console.Write("Select an option: ");
-            var choice = Console.ReadLine();
-            switch (choice)
+            while (true)
             {
-                case "1":
-                    RegisterUser();
-                    break;
-                case "2":
-                    LoginUser();
-                    break;
-                case "3":
-                    return;
-                default:
-                    Console.WriteLine("Invalid option. Please try again.");
-                    break;
+                AnsiConsole.Clear();
+                AnsiConsole.Write(new FigletText("Library").Color(Color.Cyan1));
+                AnsiConsole.Write(new Rule("Account menu").RuleStyle("grey"));
 
+                var choice = AnsiConsole.Prompt(
+                    new SelectionPrompt<string>()
+                        .Title("What would you like to do?")
+                        .PageSize(5)
+                        .AddChoices(RegisterOption, LoginOption, ExitOption));
 
+                try
+                {
+                    switch (choice)
+                    {
+                        case RegisterOption:
+                            Register();
+                            break;
+                        case LoginOption:
+                            Login();
+                            break;
+                        case ExitOption:
+                            return;
+                    }
+                }
+                catch (Exception exception)
+                {
+                    AnsiConsole.MarkupLine($"[red]Operation failed:[/] {Markup.Escape(exception.Message)}");
+                }
 
+                AnsiConsole.WriteLine();
+                AnsiConsole.MarkupLine("[grey]Press any key to return to the menu.[/]");
+                Console.ReadKey(intercept: true);
             }
         }
 
-        public void RegisterUser()
+        private void Register()
         {
-            Console.Write("Enter your name: ");
-            var name = Console.ReadLine() ?? string.Empty;
-            Console.Write("Enter your email: ");
-            var email = Console.ReadLine() ?? string.Empty;
-            Console.Write("Enter your password: ");
-            var password = Console.ReadLine() ?? string.Empty;
+            var name = AnsiConsole.Ask<string>("Enter your name:");
+            var email = AnsiConsole.Ask<string>("Enter your email:");
+            var password = AnsiConsole.Prompt(
+                new TextPrompt<string>("Enter your password:")
+                    .Secret());
+
             _service.RegisterUser(name, email, password);
-            VerifyUser();
+            AnsiConsole.MarkupLine("[green]Registration saved. A verification email was sent.[/]");
+            Verify();
         }
 
-        public void LoginUser()
+        private void Login()
         {
-            Console.Write("Enter your email: ");
-            var email = Console.ReadLine() ?? string.Empty;
-            Console.Write("Enter your password: ");
-            var password = Console.ReadLine() ?? string.Empty;
+            var email = AnsiConsole.Ask<string>("Enter your email:");
+            var password = AnsiConsole.Prompt(
+                new TextPrompt<string>("Enter your password:")
+                    .Secret());
+
             _service.LoginUser(email, password);
         }
 
-        public void VerifyUser()
+        private void Verify()
         {
-            Console.Write("Enter your email: ");
-            var email = Console.ReadLine() ?? string.Empty;
-            Console.Write("Enter the verification code: ");
-            var code = Console.ReadLine() ?? string.Empty;
+            var email = AnsiConsole.Ask<string>("Enter your email:");
+            var code = AnsiConsole.Ask<string>("Enter the verification code:");
             _service.VerifyUser(email, code);
         }
 

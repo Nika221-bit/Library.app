@@ -1,0 +1,108 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Library.Application/1.0.0": {
+        "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
+          "Library.Domain": "1.0.0",
+          "Microsoft.Extensions.Configuration": "10.0.14"
+        },
+        "runtime": {
+          "Library.Application.dll": {}
+        }
+      },
+      "BCrypt.Net-Next/4.2.0": {
+        "runtime": {
+          "lib/net10.0/BCrypt-Net-Next.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration/10.0.14": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.14",
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1426.52326"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/10.0.14": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "10.0.14"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1426.52326"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/10.0.14": {
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1426.52326"
+          }
+        }
+      },
+      "Library.Domain/1.0.0": {
+        "runtime": {
+          "Library.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Library.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BCrypt.Net-Next/4.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
+      "path": "bcrypt.net-next/4.2.0",
+      "hashPath": "bcrypt.net-next.4.2.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration/10.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UcnvaEaMvRckDDhyqY1OZkFwBqpZArkHFKB6dWaQWT9XTuNttNNX8Cqsb/Sic2LfJxsMLJUXnYrxY3iX5LN9pQ==",
+      "path": "microsoft.extensions.configuration/10.0.14",
+      "hashPath": "microsoft.extensions.configuration.10.0.14.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/10.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4YdfvaoWn3tB1xQQHGrhRTFWJ8fGOqxThxduynSZy9ZFTiSaUi3vX4EK/kj8h2HQMwTlks9MWV1fv2WRBv5/1w==",
+      "path": "microsoft.extensions.configuration.abstractions/10.0.14",
+      "hashPath": "microsoft.extensions.configuration.abstractions.10.0.14.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/10.0.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1bbZqqCJTPba3inTADExbp/9PsGVyvGOX3zr6tFr7ySCgVkX9Lpw7BV0TizktNItd3SsbUu1sQfSAYm1GZMoNw==",
+      "path": "microsoft.extensions.primitives/10.0.14",
+      "hashPath": "microsoft.extensions.primitives.10.0.14.nupkg.sha512"
+    },
+    "Library.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
