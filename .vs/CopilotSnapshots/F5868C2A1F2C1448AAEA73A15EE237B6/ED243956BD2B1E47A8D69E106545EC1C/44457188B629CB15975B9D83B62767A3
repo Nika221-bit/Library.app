@@ -1,0 +1,11 @@
+﻿{
+  "EmailSettings": {
+    "SmtpServer": "smtp.gmail.com",
+    "Port": 587,
+    "SenderEmail": "ed1t0r22091@gmail.com",
+    "SenderName": "Library",
+    "AppPassword": "REPLACE_WITH_A_NEW_16_CHARACTER_GMAIL_APP_PASSWORD",
+    "EnableSsl": true,
+    "TimeoutSeconds": 30
+  }
+}

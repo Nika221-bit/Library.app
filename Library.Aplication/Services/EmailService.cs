@@ -27,6 +27,7 @@ public sealed class EmailService : IEmailService
         {
             using var client = new SmtpClient(settings.Server, settings.Port)
             {
+                UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(settings.Sender, settings.Password),
                 EnableSsl = settings.EnableSsl,
                 Timeout = settings.TimeoutMilliseconds

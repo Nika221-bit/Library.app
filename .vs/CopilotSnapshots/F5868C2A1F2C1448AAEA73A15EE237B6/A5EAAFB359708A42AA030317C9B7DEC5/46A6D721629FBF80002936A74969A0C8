@@ -1,0 +1,9 @@
+﻿{
+  "EmailSettings": {
+    "SmtpServer": "smtp.gmail.com",
+    "Port": 587,
+    "SenderEmail": "ed1t0r22091@gmail.com",
+    "SenderName": "Library",
+    "AppPassword": "vxnl qnzy tlaq maah"
+  }
+}

@@ -1,15 +1,1 @@
-﻿1|admin_giorgi|admin@library.ge|secureAdmin123
-2|Nikolozi|Nika@gmail.com|password
-3|Nikoloz|google@Gmail.com|123
-0|nikoloz|paresiw914@macsnipe.com|$2a$11$/To/ivJqdCaBXD6HVATkCu6hAwR/GyVz4c.zO8rAR2SEOADz43sY6||False|User
-1|nika|paresiw914@macsnipe.com|$2a$11$9kdKZuYK7gVPFKxd.n3akOYJVvm0ZUsdO.MkY7NLiQQXAaLETwrCG||False|User
-2|Nikoloz|paresiw914@macsnipe.com|$2a$11$Q4wcFi2UkJN/2YguC3lYMOSaFFI5kH3E7TJrdfO5E7II/k9fvX3YS||False|User
-3|nika|paresiw914@macsnipe.com|$2a$11$zfzl6QRQPrbCStlXs2Fwo.t6lq15qZbyaBXE.fSt9hLQbbpM9U.lu|111061|False|User
-4|Nikoloz|paresiw914@macsnipe.com|$2a$11$IShYY9c/Dgt0QIbetLZy3Onu9DxtWe9F2ydzHRl.aKBIZznKpx0/W|971578|False|User
-5|Nikolozi|paresiw914@macsnipe.com|$2a$11$wwj6x4cubLsPgu3MonenS.lSPdhNq0JwCQfrD5t2wIrKmlPiILIha|217880|False|User
-6|Nikolozi|paresiw914@macsnipe.com|$2a$11$X.LHa/jq0c9dkBnxdHGz8.sG6ufaiT9p5VdNGf/NNTZMe.D4/ZG5u|531364|False|User
-7|Nikoloz|paresiw914@macsnipe.com|$2a$11$5mgo67OEM5lApx40BbBeSeNg8O.PwXPJdbO2Ptiz8wYiQzfCCFoU2|205189|False|User
-8|Nikolozi|paresiw914@macsnipe.com|$2a$11$uHkAtXMaO/zWuKVK..6ujOfwbbSUJimbizfGj/8leFVrzdxoOMdha|408418|False|User
-9|nikoloz|kadkadk@|$2a$11$1bNzLig7d4B6LV9wRYG9Xu55.y3XwQLZ9li3V7SEmTuJVfYARBEd2|438917|False|User
-10|Nikolozi|notig25837@nbasweeps.com|$2a$11$Rh6gRaY04eIze9OsDbazUuro8hQ4Gfs9U9svnEmC0VoRhxBgpRFdu|521579|False|User
-11|Nikolozi|notig25837@nbasweeps.com|$2a$11$BsbRbc4UdR8nird0UOJGYObT.L/MOR0dzTkGqHJUTabaqthhsCJXC|796284|False|User
+﻿1|Nikolozi|notig25837@nbasweeps.com|$2a$11$h7S9htpyUdMispLpC8A.UOV8cMIFhnC4BtVynImkU559fTv52WVp.|644802|False|User
