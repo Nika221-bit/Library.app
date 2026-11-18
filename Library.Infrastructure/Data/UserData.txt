@@ -1,1 +1,4 @@
-﻿1|Nikolozi|notig25837@nbasweeps.com|$2a$11$h7S9htpyUdMispLpC8A.UOV8cMIFhnC4BtVynImkU559fTv52WVp.|644802|False|User
+1|Nikolozi|notig25837@nbasweeps.com|$2a$11$h7S9htpyUdMispLpC8A.UOV8cMIFhnC4BtVynImkU559fTv52WVp.|644802|True|User
+2|Nika|pacim97954@nbasweeps.com|$2a$11$W2JH3k/yyNk41gq0iwFNe.yYJOKZqDpc6uuIwjEL2hckgJTBLrrBC|923656|True|Admin
+3|admin|peger91338@micropaste.com|$2a$11$0Dn9JRDcHh.GUTq8po5pauRu6kTHLVleLh5FJZbcGv3aA0rErdi/O|501431|True|Admin
+4|george|tapako5052@forims.com|$2a$11$7WPw9G4QHWUvQNdWUhW66OgECWAn.4oesDHeUjZVDXi.2mDk3fGr2|386755|True|User

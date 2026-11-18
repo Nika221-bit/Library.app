@@ -1,0 +1,76 @@
+﻿using Library.Aplication.Services;
+using Library.Domain.Models;
+using Spectre.Console;
+
+namespace Library.UI.Menu
+{
+    internal class AdminMenu
+    {
+        private readonly User _user;
+        private readonly LibraryService _library;
+
+        public AdminMenu(User user, LibraryService library)
+        {
+            _user = user;
+            _library = library;
+        }
+
+        public void ShowMenu()
+        {
+            while (true)
+            {
+                var choice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                    .Title($"Admin menu - {Markup.Escape(_user.Name)}")
+                    .AddChoices("List users", "Remove user", "Add book", "Remove book", "List books and borrowers", "Back"));
+
+                switch (choice)
+                {
+                    case "List users": ListUsers(); break;
+                    case "Remove user": RemoveUser(); break;
+                    case "Add book": AddBook(); break;
+                    case "Remove book": RemoveBook(); break;
+                    case "List books and borrowers": ListBooks(); break;
+                    case "Back": return;
+                }
+            }
+        }
+
+        private void ListUsers()
+        {
+            var users = _library.GetUsers();
+            AnsiConsole.Write(new Table().Border(TableBorder.Rounded)
+                .AddColumns("Id", "Name", "Email", "Role", "Verified")
+                .Rows(users.Select(user => new[] { user.Id.ToString(), user.Name, user.Email, user.Role, user.IsVerified.ToString() })));
+        }
+
+        private void RemoveUser()
+        {
+            var email = AnsiConsole.Ask<string>("Email of user to remove:");
+            _library.RemoveUser(email);
+            AnsiConsole.MarkupLine("[green]User removed.[/]");
+        }
+
+        private void AddBook()
+        {
+            var title = AnsiConsole.Ask<string>("Book title:");
+            var author = AnsiConsole.Ask<string>("Author:");
+            _library.AddBook(title, author);
+            AnsiConsole.MarkupLine("[green]Book added.[/]");
+        }
+
+        private void RemoveBook()
+        {
+            var id = AnsiConsole.Ask<int>("Book id to remove:");
+            _library.RemoveBook(id);
+            AnsiConsole.MarkupLine("[green]Book removed.[/]");
+        }
+
+        private void ListBooks()
+        {
+            var books = _library.GetBooks();
+            AnsiConsole.Write(new Table().Border(TableBorder.Rounded)
+                .AddColumns("Id", "Title", "Author", "Borrowed by")
+                .Rows(books.Select(book => new[] { book.Id.ToString(), book.Title, book.Author, book.BorrowedByEmail ?? "Available" })));
+        }
+    }
+}

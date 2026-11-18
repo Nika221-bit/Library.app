@@ -1,0 +1,31 @@
+﻿using Library.Aplication.Services;
+using Library.Infrastructure.Repositories;
+using Microsoft.Extensions.Configuration;
+using MenuView = Library.UI.Menu.Menu;
+
+namespace Library.UI
+{
+    internal static class Program
+    {
+        private static void Main()
+        {
+            var configuration = new ConfigurationBuilder()
+                // The working directory is controlled by the caller (and is often the
+                // solution directory when the application is started from Visual Studio).
+                // appsettings.json is copied beside the executable, so use that stable
+                // location instead.
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddEnvironmentVariables()
+                .Build();
+
+            var userRepository = new UserRepository();
+            var emailService = new EmailService(configuration);
+            var userService = new UserService(userRepository, emailService);
+
+            var menu = new MenuView(userService);
+            menu.ShowMenu();
+        }
+
+    }
+}

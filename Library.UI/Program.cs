@@ -10,16 +10,19 @@ namespace Library.UI
         private static void Main()
         {
             var configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
+             
+                .SetBasePath(AppContext.BaseDirectory)
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddEnvironmentVariables()
                 .Build();
 
             var userRepository = new UserRepository();
+            var bookRepository = new BookRepository();
             var emailService = new EmailService(configuration);
             var userService = new UserService(userRepository, emailService);
+            var libraryService = new LibraryService(userRepository, bookRepository);
 
-            var menu = new MenuView(userService);
+            var menu = new MenuView(userService, libraryService);
             menu.ShowMenu();
         }
 

@@ -35,3 +35,4 @@ C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\bin\Debug\net10.0\Spectre.
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\bin\Debug\net10.0\Library.Application.dll
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\bin\Debug\net10.0\Library.Application.pdb
 C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\bin\Debug\net10.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\User\OneDrive\Desktop\Library.app\Library.UI\bin\Debug\net10.0\Data\Books.txt

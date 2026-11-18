@@ -10,10 +10,12 @@ namespace Library.UI.Menu
         private const string ExitOption = "Exit";
 
         private readonly UserService _service;
+        private readonly LibraryService _library;
 
-        public Menu(UserService service)
+        public Menu(UserService service, LibraryService library)
         {
             _service = service;
+            _library = library;
         }
 
         public void ShowMenu()
@@ -62,10 +64,32 @@ namespace Library.UI.Menu
             var password = AnsiConsole.Prompt(
                 new TextPrompt<string>("Enter your password:")
                     .Secret());
-
-            _service.RegisterUser(name, email, password);
+            var role = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("Register as:")
+                    .AddChoices("User", "Admin"));
+            if(role == "Admin")
+            {
+                var secretWord = AnsiConsole.Ask<string>("Enter the secret word for admin registration:");
+                var configSecretWord = System.Text.Json.JsonDocument.Parse(File.ReadAllText("appsettings.json"))
+                    .RootElement.GetProperty("SecretWordForAdmin").GetString();
+                if (secretWord != configSecretWord)
+                {
+                    AnsiConsole.MarkupLine("[red]Invalid secret word for admin registration.[/]");
+                    role = "User"; 
+                }
+            }
+            _service.RegisterUser(name, email, password, role);
             AnsiConsole.MarkupLine("[green]Registration saved. A verification email was sent.[/]");
-            Verify();
+            if (Verify(email))
+            {
+                var user = _service.LoginUser(email, password);
+                if (user is not null)
+                {
+                    AnsiConsole.MarkupLine($"[green]Welcome, {Markup.Escape(user.Name)}![/]");
+                    OpenRoleMenu(user);
+                }
+            }
         }
 
         private void Login()
@@ -75,14 +99,49 @@ namespace Library.UI.Menu
                 new TextPrompt<string>("Enter your password:")
                     .Secret());
 
-            _service.LoginUser(email, password);
+            var user = _service.LoginUser(email, password);
+            if (user is null)
+            {
+                AnsiConsole.MarkupLine("[red]Invalid email or password.[/]");
+                return;
+            }
+
+            if (!user.IsVerified)
+            {
+                AnsiConsole.MarkupLine("[yellow]Your account is not verified yet.[/]");
+                var code = AnsiConsole.Ask<string>("Enter the verification code sent to your email:");
+                if (!_service.VerifyUser(email, code))
+                {
+                    AnsiConsole.MarkupLine("[red]Invalid verification code.[/]");
+                    return;
+                }
+
+                AnsiConsole.MarkupLine("[green]Email verified successfully.[/]");
+            }
+
+            AnsiConsole.MarkupLine($"[green]Login successful. Welcome, {Markup.Escape(user.Name)}![/]");
+            OpenRoleMenu(user);
         }
 
-        private void Verify()
+        private void OpenRoleMenu(Library.Domain.Models.User user)
         {
-            var email = AnsiConsole.Ask<string>("Enter your email:");
+            if (string.Equals(user.Role, "Admin", StringComparison.OrdinalIgnoreCase))
+                new AdminMenu(user, _library, _service).ShowMenu();
+            else
+                new UserMenu(user, _library).ShowMenu();
+        }
+
+        private bool Verify(string email)
+        {
             var code = AnsiConsole.Ask<string>("Enter the verification code:");
-            _service.VerifyUser(email, code);
+            if (_service.VerifyUser(email, code))
+            {
+                AnsiConsole.MarkupLine("[green]User verified successfully![/]");
+                return true;
+            }
+
+            AnsiConsole.MarkupLine("[red]Invalid email or verification code.[/]");
+            return false;
         }
 
     }

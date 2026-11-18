@@ -79,7 +79,9 @@ public sealed class EmailService : IEmailService
     {
         var value = _configuration[$"EmailSettings:{name}"]?.Trim();
         return string.IsNullOrWhiteSpace(value)
-            ? throw new InvalidOperationException($"Missing EmailSettings:{name} configuration.")
+            ? throw new InvalidOperationException(
+                $"Missing EmailSettings:{name} configuration. Set EmailSettings__{name} " +
+                "as an environment variable or add it to Library.UI/appsettings.json.")
             : value;
     }
 

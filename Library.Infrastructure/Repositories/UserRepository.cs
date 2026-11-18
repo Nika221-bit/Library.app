@@ -15,11 +15,27 @@ namespace Library.Infrastructure.Repositories
 
         public void SaveUser(User user)
         {
-            File.AppendAllLines(_path, new List<string> { user.ToString() });
+            var users = File.Exists(_path)
+                ? File.ReadAllLines(_path).ToList()
+                : new List<string>();
+            var existingIndex = users.FindIndex(line =>
+            {
+                var parts = line.Split('|');
+                return parts.Length >= 7 && int.TryParse(parts[0], out var id) && id == user.Id;
+            });
+
+            if (existingIndex >= 0)
+            {
+                users[existingIndex] = user.ToString();
+                File.WriteAllLines(_path, users);
+                return;
+            }
+
+            File.AppendAllLines(_path, new[] { user.ToString() });
         }
         public void SaveUsers(List<string> users)
         {
-            File.AppendAllLines(_path, users);
+            File.WriteAllLines(_path, users);
         }
         public void DeleteAllUsers()
         {

@@ -1,10 +1,94 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Library.Aplication.Services;
+using Library.Domain.Models;
+using Spectre.Console;
 
 namespace Library.UI.Menu
 {
     internal class AdminMenu
     {
+        private readonly User _user;
+        private readonly LibraryService _library;
+        private readonly UserService _userService;
+
+        public AdminMenu(User user, LibraryService library, UserService userService)
+        {
+            _user = user;
+            _library = library;
+            _userService = userService;
+        }
+
+        public void ShowMenu()
+        {
+            while (true)
+            {
+                var choice = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                    .Title($"Admin menu - {Markup.Escape(_user.Name)}")
+                    .AddChoices("List users", "Add user", "Remove user", "Add book", "Remove book", "List books and borrowers", "Back"));
+
+                switch (choice)
+                {
+                    case "List users": ListUsers(); break;
+                    case "Add user": AddUser(); break;
+                    case "Remove user": RemoveUser(); break;
+                    case "Add book": AddBook(); break;
+                    case "Remove book": RemoveBook(); break;
+                    case "List books and borrowers": ListBooks(); break;
+                    case "Back": return;
+                }
+            }
+        }
+
+        private void AddUser()
+        {
+            var name = AnsiConsole.Ask<string>("Name:");
+            var email = AnsiConsole.Ask<string>("Email:");
+            var password = AnsiConsole.Prompt(new TextPrompt<string>("Password:").Secret());
+            var role = AnsiConsole.Prompt(new SelectionPrompt<string>()
+                .Title("Role:").AddChoices("User", "Admin"));
+            _userService.RegisterUser(name, email, password, role);
+            AnsiConsole.MarkupLine("[green]User added and verification email sent.[/]");
+        }
+
+        private void ListUsers()
+        {
+            var users = _library.GetUsers();
+        var table = new Table().Border(TableBorder.Rounded)
+            .AddColumns("Id", "Name", "Email", "Role", "Verified");
+        foreach (var user in users)
+            table.AddRow(user.Id.ToString(), user.Name, user.Email, user.Role, user.IsVerified.ToString());
+        AnsiConsole.Write(table);
+        }
+
+        private void RemoveUser()
+        {
+            var email = AnsiConsole.Ask<string>("Email of user to remove:");
+            _library.RemoveUser(email);
+            AnsiConsole.MarkupLine("[green]User removed.[/]");
+        }
+
+        private void AddBook()
+        {
+            var title = AnsiConsole.Ask<string>("Book title:");
+            var author = AnsiConsole.Ask<string>("Author:");
+            _library.AddBook(title, author);
+            AnsiConsole.MarkupLine("[green]Book added.[/]");
+        }
+
+        private void RemoveBook()
+        {
+            var id = AnsiConsole.Ask<int>("Book id to remove:");
+            _library.RemoveBook(id);
+            AnsiConsole.MarkupLine("[green]Book removed.[/]");
+        }
+
+        private void ListBooks()
+        {
+            var books = _library.GetBooks();
+        var table = new Table().Border(TableBorder.Rounded)
+            .AddColumns("Id", "Title", "Author", "Borrowed by");
+        foreach (var book in books)
+            table.AddRow(book.Id.ToString(), book.Title, book.Author, book.BorrowedByEmail ?? "Available");
+        AnsiConsole.Write(table);
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Library.Aplication.Services
             _emailService = emailService;
         }
 
-        public void RegisterUser(string name, string email, string password)
+        public void RegisterUser(string name, string email, string password, string role)
         {
             var users = _userRepository.GetAllUsers();
 
@@ -32,6 +32,7 @@ namespace Library.Aplication.Services
                 Password = BCrypt.Net.BCrypt.HashPassword(password),
                 IsVerified = false,
                 VerifiCationCode = verificationCode,
+                Role = role,
 
             };
             _userRepository.SaveUser(user);
@@ -40,33 +41,29 @@ namespace Library.Aplication.Services
             _emailService.SendEmail(email, "ვერიფიკაციის კოდი", $"თქვენი ვერიფიკაციის კოდია: {verificationCode}");
         }
 
-        public void LoginUser(string email, string password)
+        public User? LoginUser(string email, string password)
         {
             var user = _userRepository.GetUserByEmail(email);
 
             if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
-                Console.WriteLine("Login successful!");
+                return user;
             }
-            else
-            {
-                Console.WriteLine("Invalid email or password.");
-            }
+
+            return null;
         }
 
-        public void VerifyUser(string email, string verificationCode)
+        public bool VerifyUser(string email, string verificationCode)
         {
             var user = _userRepository.GetUserByEmail(email);
-            if (user != null && user.VerifiCationCode == verificationCode)
+            if (user == null || user.VerifiCationCode != verificationCode)
             {
-                user.IsVerified = true;
-                _userRepository.SaveUser(user);
-                Console.WriteLine("User verified successfully!");
+                return false;
             }
-            else
-            {
-                Console.WriteLine("Invalid email or verification code.");
-            }
+
+            user.IsVerified = true;
+            _userRepository.SaveUser(user);
+            return true;
         }
     }
 }

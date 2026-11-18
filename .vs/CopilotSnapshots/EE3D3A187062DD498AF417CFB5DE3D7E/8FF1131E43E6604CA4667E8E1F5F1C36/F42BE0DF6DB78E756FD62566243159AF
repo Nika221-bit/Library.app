@@ -1,0 +1,20 @@
+﻿using Library.Domain.Models;
+using Spectre.Console;
+
+namespace Library.UI.Menu
+{
+    internal class AdminMenu
+    {
+        private readonly User _user;
+
+        public AdminMenu(User user)
+        {
+            _user = user;
+        }
+
+        public void ShowMenu()
+        {
+            AnsiConsole.MarkupLine($"[cyan]Admin menu[/] - {Markup.Escape(_user.Name)}");
+        }
+    }
+}

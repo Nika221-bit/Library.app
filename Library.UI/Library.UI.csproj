@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Library.Aplication\Library.Application.csproj" />
     <ProjectReference Include="..\Library.Domain\Library.Domain.csproj" />
     <ProjectReference Include="..\Library.Infrastructure\Library.Infrastructure.csproj" />
@@ -15,6 +25,7 @@
 
   <ItemGroup>
     <None Include="..\Library.Infrastructure\Data\UserData.txt" Link="Data\UserData.txt" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\Library.Infrastructure\Data\Books.txt" Link="Data\Books.txt" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,12 +33,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.14" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.14" />
     <PackageReference Include="Spectre.Console" Version="0.57.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="appsettings.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
